@@ -25,15 +25,9 @@ Structure du projet :
 |	|-----2 ...  
 
 Sprint 1
-
-PageChallenge : photomaton
-
-PageChallenge : flips
-
-PageChallenge : motifs
-
-PageChallenge : tetris
-
-PageChallenge : avec des droites
-
-PageChallenge : avec des cercles
+Challenge : photomaton
+Challenge : flips
+Challenge : motifs
+Challenge : tetris
+Challenge : avec des droites
+Challenge : avec des cercles
