@@ -24,10 +24,10 @@ Structure du projet :
 |	|-----1 ...  
 |	|-----2 ...  
 
-Sprint 1
-Challenge : photomaton
-Challenge : flips
-Challenge : motifs
-Challenge : tetris
-Challenge : avec des droites
-Challenge : avec des cercles
+Sprint 1  
+Challenge : photomaton  
+Challenge : flips  
+Challenge : motifs  
+Challenge : tetris  
+Challenge : avec des droites  
+Challenge : avec des cercles  
