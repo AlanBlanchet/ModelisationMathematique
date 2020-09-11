@@ -1,8 +1,13 @@
-#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 11 14:36:11 2020
+import matplotlib.pyplot as plt
+import numpy as np
+finalTab = np.zeros((180,180,4))
 
-@author: blancheta
-"""
-
+cheval = plt.imread("/home/ann2/mateoa/Images/dark-knight.png","PNG")
+finalTab = np.copy(cheval)
+tab2 = np.copy(cheval)
+img = np.block([finalTab, tab2])
+print(img)
+print(img.shape)
+plt.imshow(img)
+plt.show()
