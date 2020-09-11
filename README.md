@@ -26,8 +26,6 @@ Structure du projet :
 
 Sprint 1
 
-PageSprint 1
-
 PageChallenge : photomaton
 
 PageChallenge : flips
