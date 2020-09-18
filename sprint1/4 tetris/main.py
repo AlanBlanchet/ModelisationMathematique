@@ -16,7 +16,7 @@ orangeChemin = np.array([
     
 #Créer un carré de la couleur en paramètredans la mtarice passé en paramètre, à la position (x,y) passée en paramètre
 def carre(matrice, couleur, position):
-    x = position[0] * 50 
+    x = position[0] * 50
     y = position[1] * 50
     matrice[y:y+50,x:x+50,:] = couleur
     
@@ -26,7 +26,7 @@ def forme(matrice, chemin, couleur):
     for t in chemin:
         carre(matrice,couleur,t)
 
-    
+
 #assigne les modification d'image de chaque étapes, à la matrice passée en paramètre
 def afficher(matrice,i):
     #fond gris
