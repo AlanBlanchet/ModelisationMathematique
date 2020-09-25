@@ -31,9 +31,9 @@ def forme(matrice, chemin, couleur):
 def afficher(matrice,i):
     matrice[:,:,:] = [127,127,127]
     #ligne bleue à gauche
-    forme(render,[(0,0),(0,1),(0,2),(0,3)],bleu)
-    forme(render,orangeChemin[i],orange)
-    forme(render,[(3,3),(4,3),(4,2),(5,2)],vert)
+    forme(matrice,[(0,0),(0,1),(0,2),(0,3)],bleu)
+    forme(matrice,orangeChemin[i],orange)
+    forme(matrice,[(3,3),(4,3),(4,2),(5,2)],vert)
 
 
 
