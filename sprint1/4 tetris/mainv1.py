@@ -29,6 +29,7 @@ def forme(matrice, chemin, couleur):
 
 #assigne les modification d'image de chaque étapes, à la matrice passée en paramètre
 def afficher(matrice,i):
+    #fond gris
     matrice[:,:,:] = [127,127,127]
     #ligne bleue à gauche
     forme(render,[(0,0),(0,1),(0,2),(0,3)],bleu)
@@ -38,7 +39,7 @@ def afficher(matrice,i):
 
 
 #sélection de l'étape souhaitée
-render = np.ones((200,300,3), dtype=np.uint8) * 127
+render = np.zeros((200,300,3), dtype=np.uint8)
 choix = int(input("Saisir l'etape souhaitee ou 0 pour sortir: "));
 while choix != 0:
     afficher(render,choix-1)

@@ -24,12 +24,12 @@ def repeterVertical(img, n):
     return np.block([[[img]], [[repeterVertical(img, n - 1)]]])
 
 # Variables et appels
-carre = np.ones((20,20,3), dtype=np.uint8) * np.array([255, 127, 14], dtype=np.uint8)
+carre = np.zeros((20,20,3), dtype=np.uint8)
 
-
+# On insère du orange dans le carré
+carre[:,:,:] = [255, 127, 14]
 # On insère du vert en bas à droite de la 14e ligne à la dernière
 # et de la 14e colonne à la dernière
-#carre[14:,14:,:] = carre[14:,14:,:] + np.array([-211,33,30], dtype=np.uint8)
 carre[14:,14:,:] = [44, 160, 44]
 
 # On execute la fonction pour coller le carré et son image horizontale
