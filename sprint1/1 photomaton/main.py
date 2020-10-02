@@ -15,7 +15,7 @@ def vertical():
     cheval = np.block([[[cheval]], [[cheval]]])
 
 if x == 1:
-    horizontal()
+    cheval = cheval[:,np.block([np.arange(0, 90), np.arange(0, 90)])]
 elif x == 2:
     vertical()
 elif x == 3:
