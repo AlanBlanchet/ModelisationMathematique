@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-face = plt.imread('../face.png', 'PNG') * 255;
+face = plt.imread('../face.png', 'PNG');
 l, c, colFormat = face.shape
 
 gris = [200,200,200];
@@ -19,6 +19,12 @@ X, Y = np.meshgrid(np.arange(c),
 
 #print(lFace)
 
+for j in range(l):
+     for i in range(c):
+         decalageI = i + u[0]
+         decalageJ = j - u[1]
+         if(decalageJ > 0 and decalageJ < l and decalageI > 0 and decalageI < c):
+             carreGris[decalageJ,decalageI] = face[j,i]
 
 plt.imshow(carreGris)
 plt.show()
