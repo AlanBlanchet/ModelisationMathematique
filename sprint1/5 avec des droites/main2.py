@@ -4,21 +4,31 @@ import matplotlib.pyplot as plt
 width = 300
 height = 200
 
-bleu = np.ones(3, dtype=np.int64) * [0, 17, 116]
-jaune = np.ones(3, dtype=np.int64) * [254, 205, 36]
-rouge = np.ones(3, dtype=np.int64) * [210, 38, 46]
-blanc = np.ones(3, dtype=np.int64) * [0, 0, 0]
-vert = np.ones(3, dtype=np.int64) * [0, 122, 51]
+bleu = [31, 119, 180]
+gris = [127, 127, 127]
+vert = [44, 160, 44]
+orange = [255, 127, 14]
 
-X, Y = np.meshgrid(np.arange(width, dtype=np.int64),
-                   np.arange(height, dtype=np.int64),
-                   indexing='ij')
+enveloppe = np.zeros((height, width, 3), dtype=np.uint8)
 
-seychelles = np.ones((height, width, 3), dtype = np.uint8) * 255
+i = np.arange(height)
+j = np.arange(width)
+
+I, J = np.meshgrid(i, j, indexing="ij")
+
+decroissante = ((2./3.) * J)
+croissante = (height - (2./3.) * J)
+
+ibleu = (I <= decroissante) & (I <= croissante)
+igris = (I > decroissante) & (I <= croissante)
+ivert = (I > decroissante) & (I > croissante)
+iorange = (I <= decroissante) & (I > croissante)
+
+enveloppe[ibleu] = bleu
+enveloppe[igris] = gris
+enveloppe[ivert] = vert
+enveloppe[iorange] = orange
 
 
-seychelles = seychelles[X < Y,:,:] = bleu
-
-
-plt.imshow(seychelles)
+plt.imshow(enveloppe)
 plt.show()
